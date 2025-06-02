@@ -1,0 +1,27 @@
+.navigator{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 50px; */ /* Se elimina la altura fija para que se ajuste al contenido */
+    background-color: #333; /* Este es el color de Tailwind bg-gray-800 */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem; /* Equivalente a p-4 de Tailwind */
+    z-index: 1000; /* Asegura que el nav esté sobre otros elementos */
+}
+
+
+.bg-image{
+    background-image: url('/public/img/background/development.png'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Color del texto */
+}

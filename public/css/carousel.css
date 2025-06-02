@@ -1,0 +1,56 @@
+.carousel{
+    display: flex;
+    overflow: hidden;
+    width: auto;
+    height: 100px;
+    padding: 8px;
+    background-color: white; /* Ajusta la altura según tus necesidades */
+}
+.carousel div {
+    flex: 0 0 auto; /* Evita que los elementos se estiren */
+    margin-right: 10px; /* Espacio entre las imágenes */
+    padding: 3px;
+    opacity: 1; /* Estado inicial, completamente opaco */
+    transition: opacity 1.0s ease-in-out; /* Duración de la transición de opacidad (1.0 segundos) */
+}
+.carousel img {
+    width: auto; /* Ajusta el ancho de las imágenes */
+    height: 70px; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Bordes redondeados */
+}
+.carousel img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+    transition: transform 0.3s ease; /* Transición suave */
+    cursor: pointer;
+}
+.carousel::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento */
+}
+.carousel {
+    scroll-snap-type: x mandatory; /* Habilita el desplazamiento por salto */
+}
+.carousel div {
+    scroll-snap-align: start; /* Alinea los elementos al inicio del contenedor */
+}
+.carousel div:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+.carousel {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+}
+.carousel > div {
+    /* background: lightblue; */ /* Descomenta para depurar tamaño de items */
+    flex: none; /* Cada item mantiene su propio tamaño */
+    width: 150px; /* Ancho fijo para cada item (ajusta según necesites) */
+    height: 100px; /* Alto fijo para cada item (ajusta según necesites) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    opacity: 1; /* Estado inicial, completamente opaco */
+    transition: opacity 1.0s ease-in-out, width 1.0s ease-in-out; /* Duración de la transición de opacidad y ancho (1.0 segundos) */
+}
