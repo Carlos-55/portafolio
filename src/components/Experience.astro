@@ -1,0 +1,212 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="experience" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          {t('experience.title')} <span class="text-blue-600">{t('experience.title.accent')}</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          {t('experience.subtitle')}
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="relative">
+        <!-- Vertical Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200"></div>
+        
+        <!-- Experience Items -->
+        <div class="space-y-12">
+          <!-- Experience 1 - Bluetab -->
+          <div class="relative flex items-center">
+            <!-- Timeline Dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+            
+            <!-- Content - Right -->
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="mb-4">
+                  <h3 class="text-xl font-bold text-gray-800">Client Solutions DataX / Arquitectura BPA</h3>
+                  <p class="text-blue-600 font-semibold">Bluetab (BBVA)</p>
+                  <p class="text-gray-500 text-sm">Junio 2023 - Actual</p>
+                </div>
+                
+                <p class="text-gray-600 mb-4">
+                  Desarrollo de DataObjects para generación de transferencias y uso de tecnologías en la nube AWS. 
+                  Revisión y validación de MSA, atención a proyectos de gestión documental y firma electrónica.
+                </p>
+                
+                <div class="space-y-2 text-sm text-gray-600">
+                  <div class="flex items-center justify-end">
+                    <span>Desarrollo con Spark y Scala</span>
+                    <svg class="w-4 h-4 ml-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <span>Generación de CSV y Parquet</span>
+                    <svg class="w-4 h-4 ml-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <span>Metodologías Scrum y Jira</span>
+                    <svg class="w-4 h-4 ml-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mt-4 justify-end">
+                  <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">AWS</span>
+                  <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">S3</span>
+                  <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Lambda</span>
+                  <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Spark</span>
+                  <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Scala</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Empty Left Side -->
+            <div class="w-1/2 pl-8"></div>
+          </div>
+
+          <!-- Experience 2 - Visooal -->
+          <div class="relative flex items-center">
+            <!-- Timeline Dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+            
+            <!-- Empty Right Side -->
+            <div class="w-1/2 pr-8"></div>
+            
+            <!-- Content - Left -->
+            <div class="w-1/2 pl-8">
+              <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="mb-4">
+                  <h3 class="text-xl font-bold text-gray-800">Full Stack Javascript | Flutter</h3>
+                  <p class="text-blue-600 font-semibold">Visooal</p>
+                  <p class="text-gray-500 text-sm">Marzo 2022 - Junio 2023</p>
+                </div>
+                
+                <p class="text-gray-600 mb-4">
+                  Desarrollo full stack con React JS, Flutter para móviles con SQLite, y backend con NodeJS/Express y NestJS. 
+                  Uso de GraphQL, MongoDB, DynamoDB y servicios AWS.
+                </p>
+                
+                <div class="space-y-2 text-sm text-gray-600">
+                  <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Apps móviles con Flutter y SQLite</span>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>APIs con GraphQL y MongoDB</span>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Funciones Lambda y EC2</span>
+                  </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">React</span>
+                  <span class="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">Flutter</span>
+                  <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Node.js</span>
+                  <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">NestJS</span>
+                  <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">GraphQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 3 - e-Bitware -->
+          <div class="relative flex items-center">
+            <!-- Timeline Dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+            
+            <!-- Content - Right -->
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="mb-4">
+                  <h3 class="text-xl font-bold text-gray-800">Desarrollador FullStack / Desarrollador Móvil</h3>
+                  <p class="text-blue-600 font-semibold">e-Bitware</p>
+                  <p class="text-gray-500 text-sm">Enero 2019 - Junio 2023</p>
+                </div>
+                
+                <p class="text-gray-600 mb-4">
+                  Desarrollo backend con NestJS, Java Spring Boot y Go. Frontend con Vue.js/Quasar, Angular JS y React JS. 
+                  Aplicaciones móviles con Flutter y administración de servidores Linux en AWS y GCloud.
+                </p>
+                
+                <div class="space-y-2 text-sm text-gray-600">
+                  <div class="flex items-center justify-end">
+                    <span>Liderazgo de equipos con Scrum</span>
+                    <svg class="w-4 h-4 ml-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <span>Proyectos de largo alcance completos</span>
+                    <svg class="w-4 h-4 ml-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <span>Administración de servidores Linux</span>
+                    <svg class="w-4 h-4 ml-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mt-4 justify-end">
+                  <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">NestJS</span>
+                  <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Java Spring</span>
+                  <span class="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">Go</span>
+                  <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vue.js</span>
+                  <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Flutter</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Empty Left Side -->
+            <div class="w-1/2 pl-8"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Summary -->
+      <div class="mt-16 bg-white p-8 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">{t('experience.summary.title')}</h3>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div>
+            <div class="text-3xl font-bold text-blue-600 mb-2">6+</div>
+            <div class="text-gray-600">{t('experience.summary.years')}</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-green-600 mb-2">10+</div>
+            <div class="text-gray-600">{t('experience.summary.projects')}</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-purple-600 mb-2">20+</div>
+            <div class="text-gray-600">{t('experience.summary.technologies')}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

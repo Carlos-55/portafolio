@@ -1,0 +1,84 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="about" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          {t('about.title')} <span class="text-blue-600">{t('about.title.accent')}</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          {t('about.subtitle')}
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Side - Image/Visual -->
+        <div class="order-2 lg:order-1">
+          <div class="relative">
+            <!-- Placeholder for image - reemplaza con tu foto profesional -->
+            <div class="w-full h-96 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-2xl flex items-center justify-center">
+              <svg class="w-32 h-32 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-600 rounded-full opacity-10"></div>
+            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-indigo-600 rounded-full opacity-5"></div>
+          </div>
+        </div>
+        
+        <!-- Right Side - Content -->
+        <div class="order-1 lg:order-2">
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-gray-800">
+              {t('about.intro')}
+            </h3>
+            
+            <p class="text-gray-600 leading-relaxed">
+              {t('about.experience')}
+            </p>
+            
+            <p class="text-gray-600 leading-relaxed">
+              {t('about.technologies')}
+            </p>
+            
+            <p class="text-gray-600 leading-relaxed">
+              {t('about.learning')}
+            </p>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 gap-6 mt-8">
+              <div class="text-center p-4 bg-gray-50 rounded-lg">
+                <div class="text-3xl font-bold text-blue-600 mb-2">10+</div>
+                <div class="text-gray-600 font-medium">{t('about.stats.projects')}</div>
+              </div>
+              <div class="text-center p-4 bg-gray-50 rounded-lg">
+                <div class="text-3xl font-bold text-blue-600 mb-2">6+</div>
+                <div class="text-gray-600 font-medium">{t('about.stats.experience')}</div>
+              </div>
+            </div>
+            
+            <!-- Download CV Button -->
+            <div class="pt-6">
+              <a href="/CV_CARLOS_2025.pdf" 
+                 download="CV_Carlos_2025.pdf"
+                 class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                {t('about.download.cv')}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

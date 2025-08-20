@@ -1,0 +1,434 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="projects" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          {t('projects.title')} <span class="text-blue-600">{t('projects.title.accent')}</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          {t('projects.subtitle')}
+        </p>
+      </div>
+
+      <!-- Project Filters -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button class="filter-btn active bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors" data-filter="all">
+          {t('projects.filter.all')}
+        </button>
+        <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-colors" data-filter="web">
+          {t('projects.filter.web')}
+        </button>
+        <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-colors" data-filter="mobile">
+          {t('projects.filter.mobile')}
+        </button>
+        <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-colors" data-filter="api">
+          {t('projects.filter.api')}
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Clinica Shen -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="web">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-blue-400 to-green-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 2a1 1 0 000 2h6a1 1 0 100-2H7zm0 4a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Clínica Shen</h3>
+            <p class="text-gray-600 mb-4">Plataforma completa para clínica médica con roles de recepcionistas y doctores, gestión de citas, historiales y chat en tiempo real.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vue.js</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Quasar</span>
+              <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">NestJS</span>
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Socket.IO</span>
+              <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">MySQL</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              e-Bitware
+            </div>
+          </div>
+        </div>
+
+        <!-- E-Tae Platform -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="web">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-purple-400 to-blue-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">E-Tae SAAS Platform</h3>
+            <p class="text-gray-600 mb-4">Solución SAAS para administración de inventario de chips telefónicos con 3 plataformas, marca blanca y roles personalizados.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vue.js</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Quasar</span>
+              <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">NestJS</span>
+              <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">MySQL</span>
+              <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">MongoDB</span>
+              <span class="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">Flutter</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              e-Bitware
+            </div>
+          </div>
+        </div>
+
+        <!-- Facti App -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="mobile">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Facti App</h3>
+            <p class="text-gray-600 mb-4">Aplicación móvil Flutter para generación de cartas porte con almacenamiento local SQLite y visualización de documentos.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">Flutter</span>
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Dart</span>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">SQLite</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              Visool
+            </div>
+          </div>
+        </div>
+
+        <!-- GasCapital -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="mobile">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">GasCapital</h3>
+            <p class="text-gray-600 mb-4">Aplicación móvil para cálculo y pago de cargas de Gas LP con integración de OpenPay y Sr Pago, gestión de tarjetas y pagos recurrentes.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vue.js</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Quasar</span>
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Cordova</span>
+              <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">NestJS</span>
+              <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">MySQL</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              e-Bitware
+            </div>
+          </div>
+        </div>
+
+        <!-- FrancoMotors -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="web">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">FrancoMotors</h3>
+            <p class="text-gray-600 mb-4">Plataforma de administración de automóviles con seguimiento completo desde avalúo hasta venta, con analítica personalizada.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vue.js</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Quasar</span>
+              <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">NestJS</span>
+              <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">MySQL</span>
+              <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">MongoDB</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              e-Bitware
+            </div>
+          </div>
+        </div>
+
+        <!-- Educavita App -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="mobile">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Educavita App</h3>
+            <p class="text-gray-600 mb-4">Aplicación educativa para padres y tutores con calificaciones, anuncios y pagos. Publicada en Play Store y App Store.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vue.js</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Quasar</span>
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Cordova</span>
+              <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">NestJS</span>
+              <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">MySQL</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              Visool
+            </div>
+          </div>
+        </div>
+
+        <!-- Domingo Santo -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="web">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Domingo Santo</h3>
+            <p class="text-gray-600 mb-4">Plataforma de soporte y mantenimiento para restaurante con gestión de menús y platillos.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vue.js</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Vuetify</span>
+              <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">NestJS</span>
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">PostgreSQL</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              e-Bitware
+            </div>
+          </div>
+        </div>
+
+        <!-- Orfeón Anti-Piratería -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="api">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Orfeón Anti-Piratería</h3>
+            <p class="text-gray-600 mb-4">Algoritmo para detección de piratería musical en YouTube y Spotify con reportes especializados.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">React</span>
+              <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">PrimeReact</span>
+              <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">NestJS</span>
+              <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">MySQL</span>
+              <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">MongoDB</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              e-Bitware
+            </div>
+          </div>
+        </div>
+
+        <!-- AgComunicaciones -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="web">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">AgComunicaciones</h3>
+            <p class="text-gray-600 mb-4">Soporte y refactorización de plataforma para administración de inventario de chips telefónicos.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Angular</span>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Node.js</span>
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">TypeScript</span>
+              <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">MySQL</span>
+              <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">SQL Server</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              e-Bitware
+            </div>
+          </div>
+        </div>
+
+        <!-- eTrams -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="web">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">eTrams</h3>
+            <p class="text-gray-600 mb-4">Módulo de checklist para administración de pedidos con inventario integrado para almacenamiento eficiente.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vue.js</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Quasar</span>
+              <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Express</span>
+              <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">SQL Server</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              e-Bitware
+            </div>
+          </div>
+        </div>
+
+        <!-- BBVA -->
+        <div class="project-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden" data-category="api">
+          <div class="relative overflow-hidden">
+            <div class="w-full h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">BBVA Project</h3>
+            <p class="text-gray-600 mb-4">Proyecto de desarrollo para BBVA. Detalles reservados por confidencialidad empresarial.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">AWS</span>
+              <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Scala</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Spark</span>
+              <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">Confidencial</span>
+            </div>
+            
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              Bluetab
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-16">
+        <a href="#contact" 
+           class="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.952 8.952 0 01-4.906-1.451c-.711-.381-1.547-.52-2.384-.35L3 20l1.801-2.71c.17-.837.031-1.673-.35-2.384A8.952 8.952 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
+          </svg>
+          {t('projects.cta')}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Project filtering functionality
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all buttons
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'bg-blue-600', 'text-white');
+        b.classList.add('bg-gray-200', 'text-gray-700');
+      });
+      
+      // Add active class to clicked button
+      btn.classList.add('active', 'bg-blue-600', 'text-white');
+      btn.classList.remove('bg-gray-200', 'text-gray-700');
+      
+      const filter = btn.getAttribute('data-filter');
+      
+      projectCards.forEach((card: any) => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'block';
+          card.style.animation = 'fadeIn 0.5s ease-in-out';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

@@ -1,0 +1,61 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+---
+
+<div class="relative inline-block text-left">
+  <button 
+    id="language-button"
+    class="inline-flex items-center px-3 py-2 border border-gray-300 rounded-md bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+    </svg>
+    {languages[lang]}
+    <svg class="ml-2 -mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+    </svg>
+  </button>
+
+  <div 
+    id="language-dropdown"
+    class="hidden absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+  >
+    <div class="py-1">
+      {Object.entries(languages).map(([code, name]) => (
+        <a
+          href={code === 'es' ? '/' : `/${code}/`}
+          class={`block px-4 py-2 text-sm transition-colors ${
+            lang === code 
+              ? 'bg-blue-100 text-blue-900 font-medium' 
+              : 'text-gray-700 hover:bg-gray-100'
+          }`}
+        >
+          {name}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Language dropdown functionality
+  const languageButton = document.getElementById('language-button');
+  const languageDropdown = document.getElementById('language-dropdown');
+  
+  languageButton?.addEventListener('click', () => {
+    languageDropdown?.classList.toggle('hidden');
+  });
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!languageButton?.contains(event.target as Node) && !languageDropdown?.contains(event.target as Node)) {
+      languageDropdown?.classList.add('hidden');
+    }
+  });
+</script>

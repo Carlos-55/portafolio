@@ -1,0 +1,226 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="skills" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          {t('skills.title')} <span class="text-blue-600">{t('skills.title.accent')}</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          {t('skills.subtitle')}
+        </p>
+      </div>
+
+      <!-- Skills Categories -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Frontend -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">{t('skills.frontend.title')}</h3>
+            <p class="text-gray-600 text-sm">{t('skills.frontend.description')}</p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">React & React Native</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">JavaScript/TypeScript</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">HTML5 & CSS3</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">Tailwind CSS</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">{t('skills.backend.title')}</h3>
+            <p class="text-gray-600 text-sm">{t('skills.backend.description')}</p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">Node.js & Express</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">Python & Django</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">PostgreSQL & MySQL</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">RESTful APIs</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Others -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">{t('skills.tools.title')}</h3>
+            <p class="text-gray-600 text-sm">{t('skills.tools.description')}</p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">Git & GitHub</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">VS Code</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">NPM & Yarn</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">Figma & Design</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">Postman & APIs</span>
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
+                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-800 text-center mb-8">{t('skills.soft.title')}</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">{t('skills.soft.teamwork')}</span>
+          <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">{t('skills.soft.problem')}</span>
+          <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">{t('skills.soft.communication')}</span>
+          <span class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-medium">{t('skills.soft.adaptability')}</span>
+          <span class="bg-pink-100 text-pink-800 px-4 py-2 rounded-full font-medium">{t('skills.soft.leadership')}</span>
+          <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">{t('skills.soft.learning')}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

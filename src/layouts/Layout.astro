@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Carlos Bayardo - Desarrollador Full Stack</title>
+		<meta name="description" content="Portafolio de desarrollador Full Stack especializado en React, Node.js y tecnologías modernas. Creando experiencias digitales excepcionales." />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+	
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+	}
+	
+	/* Custom scrollbar */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	
+	::-webkit-scrollbar-track {
+		background: #f1f5f9;
+	}
+	
+	::-webkit-scrollbar-thumb {
+		background: #3b82f6;
+		border-radius: 4px;
+	}
+	
+	::-webkit-scrollbar-thumb:hover {
+		background: #2563eb;
+	}
+</style>
