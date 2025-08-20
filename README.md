@@ -1,4 +1,51 @@
-# 🚀 Portafolio Personal - Carlos BayardoPortafolio web moderno y responsivo desarrollado con Astro, showcasing mis habilidades como desarrollador Full Stack con experiencia en tecnologías web modernas.## ✨ Características- **🌐 Multiidioma**: Soporte completo para Español e Inglés- **📱 Diseño Responsivo**: Optimizado para todos los dispositivos- **⚡ Alto Rendimiento**: Construido con Astro para máxima velocidad- **🎨 UI Moderna**: Diseño elegante con Tailwind CSS- **🔧 Componentes Modulares**: Arquitectura escalable y mantenible- **📜 Certificaciones**: Sección dedicada a certificaciones oficiales y cursos- **💼 Proyectos**: Showcase de proyectos profesionales con filtros dinámicos- **📧 Contacto Funcional**: Formulario de contacto integrado## 🛠️ Tecnologías### Frontend- **Astro 5.13.2** - Framework principal- **TypeScript** - Tipado estático- **Tailwind CSS 4.1.12** - Estilos utilitarios- **HTML5/CSS3** - Marcado semántico### Características Técnicas- **Internacionalización (i18n)** - Sistema completo de traducciones- **Scroll suave** - Navegación fluida entre secciones- **Optimización SEO** - Meta tags y estructura semántica- **Lazy Loading** - Carga optimizada de imágenes- **Back to Top** - Botón de retorno al inicio## 🏗️ Estructura del Proyecto```text/├── public/│   ├── favicon.svg│   └── assets/├── src/│   ├── assets/│   │   ├── astro.svg│   │   └── background.svg│   ├── components/│   │   ├── Header.astro│   │   ├── Hero.astro│   │   ├── About.astro│   │   ├── Skills.astro│   │   ├── Projects.astro
+# 🚀 Portafolio Personal - Carlos Bayardo
+
+Portafolio web moderno y responsivo desarrollado con Astro, showcasing mis habilidades como desarrollador Full Stack con experiencia en tecnologías web modernas.
+
+## ✨ Características
+
+- **🌐 Multiidioma**: Soporte completo para Español e Inglés
+- **📱 Diseño Responsivo**: Optimizado para todos los dispositivos
+- **⚡ Alto Rendimiento**: Construido con Astro para máxima velocidad
+- **🎨 UI Moderna**: Diseño elegante con Tailwind CSS
+- **🔧 Componentes Modulares**: Arquitectura escalable y mantenible
+- **📜 Certificaciones**: Sección dedicada a certificaciones oficiales y cursos
+- **💼 Proyectos**: Showcase de proyectos profesionales con filtros dinámicos
+- **📧 Contacto Funcional**: Formulario de contacto integrado
+
+## 🛠️ Tecnologías
+
+### Frontend
+- **Astro 5.13.2** - Framework principal
+- **TypeScript** - Tipado estático
+- **Tailwind CSS 4.1.12** - Estilos utilitarios
+- **HTML5/CSS3** - Marcado semántico
+
+### Características Técnicas
+- **Internacionalización (i18n)** - Sistema completo de traducciones
+- **Scroll suave** - Navegación fluida entre secciones
+- **Optimización SEO** - Meta tags y estructura semántica
+- **Lazy Loading** - Carga optimizada de imágenes
+- **Back to Top** - Botón de retorno al inicio
+
+## 🏗️ Estructura del Proyecto
+
+```text
+/
+├── public/
+│   ├── favicon.svg
+│   └── assets/
+├── src/
+│   ├── assets/
+│   │   ├── astro.svg
+│   │   └── background.svg
+│   ├── components/
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── About.astro
+│   │   ├── Skills.astro
+│   │   ├── Projects.astro
+
 │   │   ├── Experience.astro
 │   │   ├── Certifications.astro
 │   │   ├── Contact.astro
